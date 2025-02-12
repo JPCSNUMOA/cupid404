@@ -21,6 +21,11 @@ function App() {
       return;
     }
 
+    if (Message.trim.length < 10) {
+      alert("Please enter a minimum of 10 characters");
+      return;
+    }
+
     setIsLoading(true);
 
     const serviceId = "service_jsofosj";
@@ -50,7 +55,7 @@ function App() {
   return (
     <>
       {isLoading && (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50">
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-pink-800 bg-opacity-50 z-50">
           <div className="bg-white p-5 rounded-lg shadow-lg">
             <p className="text-lg font-bold">Sending email...</p>
           </div>
