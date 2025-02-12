@@ -71,7 +71,7 @@ function App() {
           </div>
         </div>
         <div className='relative flex flex-col md:flex-row h-auto flex-1  md:flex-2 m-5 p-5 gap-10 md:gap-5'>
-          <div className='h-[45svh] flex-1 md:flex-1  flex flex-col gap-2 px-4 md:p-0'>
+          <div className='h-[45svh] md:flex-1  flex flex-col gap-2 px-4 md:p-0'>
             <p className='font-bold flex-none'>Email:</p>
             <input value={ToEmail} onChange={(e) => setToEmail(e.target.value)} type='text' name='to_email' placeholder='Recipient’s email address...' className='border-1 p-2 rounded-md flex-none' />
             <p className='font-bold flex-none'>Message:</p>
