@@ -11,12 +11,21 @@ function App() {
   const [ToEmail, setToEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSend = () => {
+    if (!isValidEmail(ToEmail)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     setIsLoading(true);
 
-    const serviceId = "service_7rdgwxs";
-    const templateId = "template_hq8vdzx";
-    const userId = "JdIeekyTxJk7gWOkd";
+    const serviceId = "service_jsofosj";
+    const templateId = "template_qpohq1w";
+    const userId = "4VMW3fETxJ7y8w-5d";
 
     const templateParams = {
       to_email: ToEmail,
@@ -52,7 +61,7 @@ function App() {
         <img src={web_bg} className='absolute h-full md:w-full object-cover z-0 overflow-x-clip' />
         <div className='z-10 relative h-40 md:h-52 p-5 flex flex-col items-center md:items-start md:flex-row justify-between flex-none'>
           <div className='md:relative h-13 w-13  md:h-20 md:w-20'>
-            <a href='https://www.facebook.com/jpcs.numoa'><img src={val_logo} className='object-cover hover:cursor-pointer'/></a>
+            <a href='https://www.facebook.com/jpcs.numoa'><img src={val_logo} className='object-cover hover:cursor-pointer' /></a>
           </div>
           <div className='relative self-center min-w-40 md:self-end w-5/6 flex max-w-96  md:block md:w-2/6 md:min-w-96'>
             <img src={cupid_logo} className='object-contain md:object-cover' />
