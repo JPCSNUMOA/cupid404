@@ -21,10 +21,6 @@ function App() {
       return;
     }
 
-    if (Message.trim.length < 10) {
-      alert("Please enter a minimum of 10 characters");
-      return;
-    }
 
     setIsLoading(true);
 
