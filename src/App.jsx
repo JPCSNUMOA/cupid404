@@ -61,7 +61,6 @@ function App() {
           </div>
         </div>
       )}
-
       <div className='h-lvh w-lvw flex flex-col'>
         <img src={web_bg} className='absolute h-full md:w-full object-cover z-0 overflow-x-clip' />
         <div className='z-10 relative h-40 md:h-52 p-5 flex flex-col items-center md:items-start md:flex-row justify-between flex-none'>
@@ -80,7 +79,7 @@ function App() {
             <p className='font-bold flex-none'>Email:</p>
             <input value={ToEmail} onChange={(e) => setToEmail(e.target.value)} type='text' name='to_email' placeholder='Recipient’s email address...' className='border-1 p-2 rounded-md flex-none' />
             <p className='font-bold flex-none'>Message:</p>
-            <textarea value={Message} onChange={(e) => setMessage(e.target.value)} name='message' maxLength={120} type='text' placeholder='Enter your message here...' className='border-1 p-2 rounded-md flex-1 text-start' />
+            <textarea value={Message} onChange={(e) => setMessage(e.target.value)} name='message' maxLength={1000} type='text' placeholder='Enter your message here...' className='border-1 p-2 rounded-md flex-1 text-start' />
             <button onClick={handleSend} className='bg-pink-500 self-center px-4 py-1 text-white font-bold rounded-2xl w-fit flex-none hover:cursor-pointer mt-2'>Send &lt;3</button>
           </div>
           <div className='md:flex-1 flex flex-col gap-2  px-4 md:p-3 md:pl-7'>
